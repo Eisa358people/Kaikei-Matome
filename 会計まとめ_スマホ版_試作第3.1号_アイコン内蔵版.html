@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="会計まとめ">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAZ2ElEQVR42u2de6wc1X3Hf79zbyUwD4MwNX5cl4SSEFzV+AZsUxMoCTEBkgo3BdEolISmBgKhCEvBcQNyaRpoFBvzTsMjKUGORRB2qV27toFCjHBbeitoUxGpql0MJgaTgC+xjfGeX/84M2d+5zGzM7Mzszu7c1iud2dnZ3bP+cz39ziPwQN7t0NTmuIrw3X80kRU4NEQseGgrnAUi0Ka4ze49C4cndAQ99lM7W0dZGBZGa4XDbm5afvBBAIGlpXhXgYibp9i7Yxq6/TGhe/Z36AM9xQT3ncTPkGQHxMEjDu+FxcvB3qfvqRkuHosxsfHk5kIXmEbRjp3VD0tam0hz7YEDspG5KijjuorOIjIpcFq2ugpsjahdvQkntbQiERejQYlchuY1BHIc3Br57KFxKrJslkpEY69e/e2NRxEAAiAYYNTWxQou/9BcX6GeQRtZciWCvOTpHjBJBpC7MoVEs1KSZQMV4/F0cccHz5HouCyBENIKBkLC4joIKmkzG4z65W73dg/gEJttAnw0lAgInvfeSuBksIRwWLT5+Pj4851TwoIu9VNJnxAGFs0ARivFsn+KcYQhKjPFDQkb+5YUCJKPBA4/BUvIXGgFIhIYXC4WADAURMnmW2PFFoOvt0CIrQw5KJAQD44CDJJh20o1CZ0cVEbw5Y1QLEoQbCFxAWiJCvjpaQQRIqBw7Ijk6bMfH/f7gQsTCZsIPT1b6JA3C3QTYnKNmUMUoidg7VZcAobF/SDYlDSbUR+4/Dj337jv4vlowA4LM1IVgsi8jPBgLCMAznBSzGxSozt8RggNEDxUpIekVK9VEtFOuSjIzhyY2ExYRmLQBgottWRey1gOiKYxEvkXkSyAUmfQ0NaDEUxKOlPRPLDkUhGGIYYWARSoVEwBCMGCIJoc/Q+JyPG30CIlxvfx62zYDtQFBwaFw5AhEgY1NSUj5xwcDK0h2EIhk8tmEKQEYNQYl6CElrMuujRG7OgiQolu6rOiTCekuCPgYitIpaEVMaH5YXk4CMPHCqq1jEqWT4mMq2gCAuIsSnMATEvYtZIaDccJjsN6TJhdiqOq5RmxZIr9PkimgktJ2CwgTritfiooEeGS0hWPjLDkUSGbn3im0M+IkeUu5+G4feKvPffKFRJcBcg1nFB8Pi9FqheQ6bdHfS5q4iGeERWJsKnTnxkgyOeDNeUcMGgKDlO5L+YKTZSiM9kRlKSKcsRR4gVRvsjJoxNq6OZ9eASYpmYuvCROX2engz1CtxgVUkFGR4BIbMX6Lkm3cbwb08Rq1J0DtcH5mLBciFKMpCZPIUKBj8n7E0B5VYF/ighIhGFQJA6ApJ+AxGC3pxy+Tj6mOPjMqrFKId2QidNmXlw/5us/e2oRGrRIE/HuhOFoifBYGexTQjYq4TucysbH+OBkC0WPA9jJWDcrWYG3dCR8D+B6OhH1c6p5Z+mFI/hTAZFFYOM0GOwyABgRsWyHZZEoIEIYwUt1UCnk8SOLZLHZ7BWF9G3cnwTf0RNSAgAhAQA6nlwRPS6z4SEgASEEkggaP3Q8RoXjwrKB/vf4q2Zho9UyqHJICLdhcYNiksGj1DIY6rR+oc5cOZ17+3YcH3UzE4HOU6PxTFxJ8lJ2lm2kjw5WaYQln4gIqIIWKnQ88jqfGTwOTgZPJ8RQ0YkvmEaIAwGPQlGNDRAGxEh4sgAypEbN46lx/AQS3+i8VJnVZUfgd4BP1wf1U+QQe0QChGMDjH1AwAIJIZBf5V8ZHI+RCaDYria6ocGlUlEYJJBZNdjZIeDAhj47zy5GF1NaCqN24/eYbeSV4usL2TuYn4xK9KJ6oUIiCSRlJKI1B+S4RMCKSWoTZb3zpKGFRTvCL08yqFlg6cYtDNKUWbc03PmOBVo9kkIMypFsENa5MdEHT10XrzBStQnxAREOQh8QwQEi19MKyP1eDAEDLIgAoVEACklInI10i5I2aPI0ouHSJnYmDRlpisbUZgSKgeLXYPKi3yKSBaiyuLdVtFFyYeHOawRIIVEFvBQEWrw5fVGBP1u9Dx4AgQEaG8hkETqrySQkmQgFUpC9KMlW61WS6o6bMlWsI8MtkgpeSqxJD6Om3JqGvFIqxwH979pXWEsD6oMrdMphjxbERmU0PNgqUQyDouAobEypAvb5sjzFfL6p+AdukhWzxC/XKzwPcr+SvWDhRDqChACWi1CJCFQkhQCgQ075cpRUjjDI5eccMRjhYZDBhA6HEbMyHOFmowgx8x8QFb54RVsDQOyR/sQyeL48GXNzSSIndyNIyN4HVIS9CpqI4lILQmIQghqgRDqLa7cknumlaXIEsLa9sphBSlhK0ayFwqwP0GNzKZQRAaqHtqD7+/j7sfrb74DzrA8X/6ieOlwsiGugLhdRREUvDDnksDJuiu7+qGRqQAohBRiiIL0qZIWQkShw7TS+EjjeXQ6+jxyD3TlIetL0/0N2pqEnzt4YB9a3d4A0ycf6yBSOAqxcQsDUVOAbAvy9L/dJ+RJsWoboWsoauIdr72hdjhxZCoCChFUhhACgJS7ynmqMl3WHo4EV4WcSy24ktAYjmX0iwS/TWUNISAjosJIgE2ffOzRx33Ik5Auv6ScrRkXglrP3e+vXfKXXnohoGTnrhnTTiBAgZFaCOGPYsqbK+W1LCKN/qQSZLQSQ9obxSjHjEikyDBqzG37vb/cwUQYK7tokk9nZaviekaSZ9WqMmvWmbNnz1fPd+7a3WrJlmxJKVutlpRSSskNlu0IF2dZOk2CZRZoq5eBiQkRvX/g11ZeKRbnX+7o4uzkTEQm75nQorNnz1eIvP6LtwI+SOpi8ZFG24otoprTVJ/+q1EJ+djTakktIS4f1ddewXCQaV8sMTx4YJ8TEyQN6Hz37a4tZpepMZL3TKNAio9du/e0Wi2pUu0mH9767I5Dqr1RNq+1XcLDHCeOVq6AZ7VIj88NPC0Ax9tywseedUjdD7oHeW3t2QhShXQIgEi6C2fGJWN8zzfefHvKbx6HiCAkyCjeKSmnrgNar0+aRznQif0wHKVvLqHgZgHChDhPGVGqnidfOqEwY5fy1FbqyxIY7xHIzPVi/Gofo6OBfypbLUs/Cv/hnYayqX0xkFHXPEZ9K8FEBJ00ICIMx0ZgELiQHkynk6qYXi2qX2UwTjnImbBl/QQ0EwEY/uP9eVJKlFL10jEkLGGtIu0hUjS/L34zetYRfeNuVagiSYZ/ZCgcZGSciSccyb0Wq7xcvGf0ZjLcPf2D7qPQnsDKC4I9X2F09CwA2PPOuAwC2kA8ylDN8pTDGvdEiEbPBGLQW60zHjL2VwVpMUuN3B29NdLJ1dO2ism/ZAjF/W275Fw0u6Xdt5ZSYqsVXIBDXROPvGbFcClBkppCQo6EKjIkSXPuij2tLH4CYuLSfcVeQ96VRdIblASCMZQN0DP8MAkRKUkIklIKIVQ/vjLZRJWuTJfKIXUti4oxQHeMBAMmQY/swkiCpYpX1MAncvqqJMUX09DE7tWxH+o9Rco9U2ZxUBtgNDKAW+4YcWs48EOlUWPVZ4zSRisOsMTni3JE9FgNvnqP0Y8dNro0wFCvwuEx0ZOkktzYxX4qgRJIXDn56Xs+GvZCRmkgXZ1zR0c2r5huVXI4uJB0sALGxONeTYJZ4hFN9ELWSULhGPxwcKlqb3C9UBeS6HqRMkXDdNiuuXdO4y8rMubMmsYThMZfBACYNzqyafk0y+do6+1WEK8NZ8LCHK1ECBjGY0SEAkECqcldykyiHvUAJNVwPDKDV+ZzhHM9eJyXdLF06JHFLIhLCbFrprYJg1gCpGOOP0xHdIiGZ6o2zhsd2bxi2oLFu2zb4eDI1aVs/yN/+jyQBgLWkYlC+xzOcDeW+9TBq3uJypIu/RwfT4ghk62+ro5n7vnIGadNQwZB+ITcmGXe6Mim5VNNOICfNuXZuw8HMy5RBszhg5lZtAZ6R6mN8H9rEJXMwkkpxZvgau94hjXz9D0fOWOWTUY46tqa4xDxseeZS712pJOFvCuCw7/Oph4tzPiI1CQagx5OhSQfIuQmx2TyVe5NLacscZ9N9i0SuuX4L0bEp+4+ee5p0xBtMjAmy6G3KT68Pm/1PmlOh9RMmJLLhznuyZw7b6eN9ZQA09Q4QlpsxJH+yAmGw/v86btPnnvaNC4MFhmWbLj2Zeemz1ffXVBMEszyTPkyA6ENMQa2BbUngx5YPinITbxSuCCDOaMuKgt+dKu9qHBYz/90+c1ZHVI+jyi3ebX7FnRgEubIjWmeiWRoPrZtuPi3P7fOYLTykU/+idS8y76tt+8u+6TDc0kk1QCW1qFDsjUMkpwJypi4JNMxx5/MX37qkWUA7qodUbVtvvwW3lrqdOs3/r038+9Zf8FdeAHAt9QledO5ADhxx5K5p03XIUU4gYvSk6HLtrGdpyzcMDQ8PDQ0NDw8NCSGhoaGhBAiMtsFDKDUY9CL6bKPc8Egmg5rmBMh1JhZvc6Nnu7mxP3tRpoH88bC6WQtIjWwbvPlt6icousWrNuwVrsw0giLZEJmlgVV4WQa4+HkxwEQ8ZgdS+bNnh6FqeGMHS8Zbcu80ZFX1lwA3SsdhrKezJh2QYKVBgSaq6eBnj+td7MoSQBFkpQQNKyeYvjUFcsA4KkrlklJcclyGZeZNyjQkzpdIGLqgFmMiduXzJk9HQAEAiKh2dPmkpHmmp83OvKzn3y6fnBAzJDriA8mIMEcYgShadDagtY0WnTJ0AeXELT0P3/p1hCRoOXO+cHNXDlsCXEe5ozZcA6s2b3epp8Edf8ZTtx+09zZ020szGX2s5KhLMvMSzbXEo44v51FsTYiEK6ExIEIuuuMCZPId4kS9gSS6Lkv/xUA/PTKbxEEzxU30teiZD/CVQFsYaAYZwJ4GI7RAoEMlKA7jRBsO6IFg/sZ6ck4ZeGGWpqVtrhwbDgi4Ro3wXM0I95IThDRmUiimnb+w3+htmy98q/Vu2c9/E3V5ugU8LsLacITZDEH+JgIvv3E7V+fN3sEGQVeLDKVbWM7T/rsP0BXiygWCB8i4EVEC4mmRNiNarS0EEIIoVv4zIeW6rd+76GlbEUFu1z82T9K9ROCdoy61o2OZtQ7gGn9YOL2rwdOaLxa5NCM3/rMGuh2GS5WM8AzPIeieiFw1gnUt2ziyaIoj6pGu7AsMtdndEXAG9ot/NwlkG7YmIbSGu0dtzLT5jtmzBsdcd0IjEmApiRj+qcfhx4opZiV+LwysPVa0JQG4HLCxchyTcKlVmDOg0sQcc6DS7jNwPjifiWtSegTLb2d78APsmXljHmjI3z8DsYIRiYyJp37GPRGKWXGmzc5Y7quCZQYoPAWEkK8uOg7XLLPeOAm3ib/tuhvMEWxgQtRsM7lzTJZB+KRCHoj3dqSAaXeHZLnkl1d4bftJHPsacJ9XBFx7OrvZhob3NaaZN1Bvdy8Yvrc0RGMT4Dk8EAXLN41NrZ1IOBwzUp8jVtDbDAOpqLaO9MHXTg2LZ+mXY0OmeBkQI+V6u5IrcxF8gwD9y7AyavrddJRmfXG0nqjl4xOujh6kwyo/l72XiWIa5U4LIqdQNt2NQ5eLDI6P3/PktEFOLxVnzBAt7I7Pac5piKjwJP3MhndhKOtYORrwgTOOv96WaOPWpPRK3AkNGTWkTjlGZpNy6d6ndB+JaNH4WjbVMUOmEtnUAaOjHrAUZI8pC+DSQZUtiZYfcvAktHAUWmpFxkNHNXJRu3IqKXP8bv33xj31svXrGjIGFw4EshQ73r5+MmaH2c90cT/XVwgGe9+eHkdhbNPzEqCZvQIGTm+RgNHYWQUa1MGXDPqDYeLQrLFqV426k5GXeHgUlGsYDRk1B4OLRKajEJkoyGjT8wKpyGZjEsW/nEvkJHyazShbNUlTcNsWr54YPMZfRitKMEoxKAUku/qMzLqB4flflpk5HNOGzL6x6z0YI68L8mAAe94a8ho4Cix9DEZAw1H57LR32QMLhznn//JhowGjtiyZtPUhowGDo9sAMDFX7gsHx8DQsagO6Q5+BgcMppoJRsfA0VGA0cGPgaNjEGEQzkcj333qkx8DCAZjXKk4mMwyYBmaoLNx6rVCxfsasioJRwVTE1Ys2mq5kON3Clk4HgdB/sM1tSEB7/3QNxua1etXrtq9cIFuywyivqGdZyaMNw3ZLx8zYp8A3/WrloNANyabBvbCQD9MQ50EOFwUUhPhg5VOBYKCFUaLFLBMfM7N+c8sF6TOrzjI0h68YYlhUtFVidUkaGwmDLpXwBg21jPAXHhgysBBQqEIYFCqEV01e1IILwhCQAUsgjVC4uu7yvl0ExkmpqgHA6ORaMQ/emQ5pua8IXRiRPmXDphzqXvfnh5xWQ0UxN6tKiGqWPzNMrRkXgUNUW2KbWHo4ypCU3pH7PSENAoR1N6QDmqv0N6U3qzuCQMt3z3Ym3KABaXhOGWbODo9XLvsVvcjdfvv7BgOBwShg81cPRquW/yswnv3nX4PwaUHLiokNO5JPiVA5uW6Wq5f+rWbf/1wc8/EAhABL8alzdddZK1z7PPvxpQctj6QhBppYRjuGmf7pXdmy4FgCMPxzmzjjvt1KNffmXvS6+Mu7udM38Gp+Suw9Z3yIdLgjgkpftoWqi7ZADAtCkThoZw1+4DRx4xfNQRQwkf0ZQoCenErFiPGIcUm/xHF8qG26fqxl67+RczTz5yzebdnz//hJ+9esSEE233c9+O9RYfzz7/aif64VGOlpTuo2mn7pKhyn/+fPz0s35/5/5TvftPOPGiCSde5EpIbv1wMYiJVoaaxuoCGbzsfe8QTjz1YzNP+tdtL+/d+x7XCUWGfmK9ldv/SBut9HKp7K4J1RcuG2+8+f7R/7Pz/7a/fvC9N1579dcAJ7k2RSHC+Thn/gwdxZQVrdSRDCj0rgmFl4TRJK5BmXDiRX95myKAAE6I+6BGxOUjh3j0bbRS7F0Tyijpv4blSZT6qeRopR8c0p69a0InxfUkOt8zq0NaVzjKu2tCd4OUTgRAfzZf2OKB4xBJ91FKNWApUtGXY3+yikEh4uFiUJFyFNtZU9JdEwa8dMOsYCn9eIXfNaGL0UrPwjEQXfbNpISU0YodypaqHNF9xUsTj8ag1NCsGNM4C5vYOSBTE7LGLJ0nObprVhChmJHMfRaeXLBk14bbpz77/Ksq/ty3Y33ultYxi8qgZ82QHupOr2zok55+5+2ZPnfs5FMGVuTTI1KIbFQerSCW7Xb0ZcmXtOg81eFLglXUt4IAiIjpxWMQZGNsbOvY2NbJCx4DNiYUzB61ZM1QO3Ay8tkU6GbfCjLjsvL2hgyFhXq+8OE7ebtaSuBFhG90ySjMIS23JwURiBCRiBQaiEBAp6+87cUbvhH3oe2v79n++tYBMSILH74TEa/Z9Yn7p/7UtRR8UE96a5JvpGBX560ge0Zw+h23EdG/37jUwmJwmFAOGQqhTO5Xd59z3+Rnddhi2Zc0WOQ2KHHRSvnTIS3xQEAgCkQEPr7i2yAlEBBJICD1/fRKYuoIfTabV/vpiAoLAFCIXLvnk/dOelq1sYtIQtHWpJPZCd2cDomIBAQUGRdVMSQEEKEUBIRCKBqICMjYq2/QCP+E676FS78hIgi89lfnqcmPloSUTUb3zApidPVj9L/R8gKQAAiJCBCQ1EcwlA8zDqaaweBeJ0G1BCISSggiIl737oJ7Jm7ire6lxPI9O5/x1r0Bxty4cD4QgBQWQIRAhAQBE4QAhBSTHqmFrYnrMeDKARqL4Akgfm38fEC8+8iNaWKQoubKph1g/Mh/vPgns08vy7gYfAQvAlODISKB2AQ5d/JoRS1zahiZFWAGRb2DYTIoePm1fReo9/Wc6TKY0C3ubqwyWgmMi6sfEEoIkPJMEICU1xp8pM/Sq4j6j1aRQEaQbQm3Xb//wkK6LTPZFKh6akIMH0F0CxgggiElATUeL6O2VoUph2Y+FItIP7hrAlA2GV6bAl2Yt4KBHqhf7iASeqqWzdEVRpVVV8luKaLpnYMrGFX+Tj8cyWblhUXXn/n9u0qVkNClQMMy8xiF7Fqud7CCPgnRfzgN5ZOhFz7PZlbufP65P59/djXxLUPEV58OInV1QDDOvjhYVKuNdz7/nHd7V6dDInL3QdcOudbEqtma5zk8OY8uYZFgU6An1gTTdeFQwtxPqn8YG4NC95hIDlUAAG98NGnU3TfOPQ8ASnE7ksuArI7aVb9aORy3PbMlbodenWXfttZqnSHtpZIAgH86pH4s27Kxd+u99x89X5Zt2ZjQ+v6RYNaosIQ7PTWlpkW1aXLTt4dj6cZ1TVX2ZVm6cV0bOLwDjN3xxo149J9stG339srRknLxurUNH31GxuJ1a9u2eyo4WlLe8OQTTbX2TbnhySfSNHoqs6Ie1619vBGPPpCN69Y+nrLF0ypHE7kMSISSx6yox6LHVzd81JqMRY+vzgBHerOiHlc+tqrho6ZkXPnYqkxtnU051OOK1Y82fNSOjCtWP5q1ofPA0ZLyi6seafioERlfXPVIjlbObFb047JHf9jwUQsyLnv0h/mauKPpkJf86GH9DbrQrd+UdlioBspd8BPfLuDSf+KKrzR89BoZf/h3D3Z4HDzzW9cV8oWe/PIi9aRBpOtYAMAf/OD7nR8N59z61QK/3Po/vVo/byipngkAuOih7xV1WPz4sqsL/64b/8wGrgGlVCBU+cwD9xV7Cpx1y6KSvv2Wq65rmrCact7f3lPGYfF3vvmVsr/6M9c04W4p5dz7y9Vj/NjSKyv+Sc9de0PTrvnK2feurPJ0ePKSLzWV3hRvGW7uItuUBo6mZIejuXN9UxrlaEoOOKiBoyn+8v+sszGyA5C+/gAAAABJRU5ErkJggg==">
+<title>会計まとめ</title>
+<style>
+:root{
+  --blue:#1683e6; --bluebg:#eaf6ff; --line:#dfe7ef;
+  --text:#222; --muted:#6d7782; --yellow:#fff7cf;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#f5f7fa;color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif}
+body{font-size:17px}
+.app{width:100%;max-width:430px;min-height:100vh;margin:0 auto;background:#fff;padding-bottom:82px}
+header{height:58px;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  justify-content:space-between;padding:0 16px;position:sticky;top:0;background:#fff;z-index:5}
+header h1{font-size:21px;margin:0}
+.iconbtn{border:0;background:none;color:var(--blue);font-size:30px;line-height:1;padding:0 4px}
+.month{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--line)}
+.month button{border:0;background:none;color:var(--blue);font-size:28px}
+.month strong{font-size:20px}
+.daybar{display:flex;justify-content:space-between;padding:12px 18px 8px;font-weight:700}
+.daybar span:last-child{font-size:15px;color:var(--muted)}
+.primary{display:block;width:calc(100% - 28px);margin:8px 14px 14px;border:0;border-radius:13px;
+  background:#dff2ff;color:#0874d1;font-size:20px;font-weight:700;padding:15px}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:0 14px 12px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter{white-space:nowrap;border:1px solid #d5dee8;background:#fff;border-radius:22px;padding:8px 15px;font-size:15px}.card .filter{font-size:16px;padding:8px 14px}
+.filter.active{background:#e7f4ff;color:#0874d1;border-color:#a9d9ff;font-weight:700}
+.card{margin:9px 14px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.row{display:flex;justify-content:space-between;gap:10px}
+.title{font-weight:700;font-size:17px}.amount{font-weight:800;font-size:19px}
+.sub{color:var(--muted);font-size:14px;margin-top:6px;line-height:1.5}
+.badge{display:inline-block;border-radius:10px;padding:2px 7px;font-size:12px;margin-left:4px}
+.badge.warn{background:#fff0c2;color:#8a6100}.badge.ok{background:#e8f8ec;color:#2b7b40}
+.empty{margin:35px 18px;padding:30px 18px;text-align:center;color:var(--muted);border:1px dashed #cbd6df;border-radius:15px}
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:72px;
+  background:rgba(255,255,255,.97);border-top:1px solid var(--line);display:flex;z-index:10}
+nav button{flex:1;border:0;background:none;color:#8a95a0;font-size:13px}
+nav button.active{color:var(--blue);font-weight:700}
+nav .ico{font-size:22px;display:block;margin-bottom:2px}
+.panel{padding:16px}.panel h2{font-size:20px;margin:4px 0 16px}
+label{display:block;font-weight:700;margin:14px 0 7px}
+input,select,textarea{width:100%;font:inherit;border:1px solid #cfd9e3;border-radius:11px;padding:12px;background:#fff}
+textarea{min-height:78px;resize:vertical}
+.type{display:flex;gap:8px}.type button{flex:1;padding:11px;border:1px solid #ccd7e1;background:#fff;border-radius:10px;font-size:16px}
+.type button.active{background:#e7f4ff;color:#0874d1;border-color:#9ed5ff;font-weight:700}
+.form-actions{display:flex;gap:10px;margin-top:20px}.form-actions button{flex:1;padding:13px;border-radius:11px;font-size:18px}
+.cancel{border:1px solid #d5dee8;background:#fff}.save{border:0;background:#1683e6;color:#fff;font-weight:700}
+.note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:10px}
+.section{padding:12px 16px}.stat{background:#f7fbff;border:1px solid #d9ebf8;border-radius:14px;padding:14px;margin-bottom:10px}
+.stat b{font-size:22px}.small{font-size:13px;color:var(--muted)}
+.hidden{display:none!important}
+.listline{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
+.danger{color:#c33}
+
+/* iPhoneで下部ナビが見やすいように調整 */
+nav button {
+  font-size: 17px !important;
+  line-height: 1.2 !important;
+  min-height: 72px;
+}
+nav .ico {
+  font-size: 28px !important;
+  margin-bottom: 3px;
+}
+
+
+.select-toolbar{text-align:center;padding:6px 0 8px;}
+.delete-selected{padding:8px 14px;border:1px solid #e3b8b8;border-radius:999px;background:#fff;color:#b24a4a;font-size:14px;font-weight:700;}
+.delete-selected:disabled{opacity:.45;color:#8a95a0;border-color:#d5dee8;}
+.delete-selected:not(:disabled):active{transform:scale(.98);}
+.select-record{display:flex;align-items:center;gap:7px;margin:0!important;font-weight:600!important;font-size:14px!important;color:#68727d;}
+.select-record input{width:22px;height:22px;margin:0;accent-color:#1683e6;}
+.delete-confirm{margin:0 14px 14px;padding:12px;border:1px solid #e3b8b8;border-radius:14px;background:#fff7f7;text-align:center;}
+.delete-confirm button{padding:10px 16px;border-radius:10px;font-size:16px;font-weight:700;margin:5px;}
+.delete-yes{border:0;background:#c94b4b;color:#fff;}
+.delete-no{border:1px solid #ccd7e1;background:#fff;color:#333;}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <h1><img src="kaikei-icon.png" alt="" style="width:34px;height:34px;border-radius:9px;vertical-align:-8px;margin-right:8px;">会計まとめ</h1>
+</header>
+
+<main id="main"></main>
+
+<nav>
+  <button class="active" data-tab="records"><span class="ico">📝</span>記録</button>
+  <button data-tab="accounts"><span class="ico">▦</span>会計</button>
+  <button data-tab="summary"><span class="ico">◔</span>集計</button>
+  <button data-tab="search"><span class="ico">⌕</span>検索</button>
+  <button data-tab="settings"><span class="ico">⚙</span>設定</button>
+</nav>
+</div>
+
+<script>
+const KEY="kaikei_matome_records_v3";
+const ACCOUNTS=["教会","自分","少年会","団長上和費","セレナ","その他"];
+const METHODS=["現金","口座振替","クレジットカード","デビットカード","振込","PayPay","ポイント","ETC・後日請求"];
+const LOCATIONS=["現金","教会現金","自分の現金","銀行口座","PayPay残高","ポイント","その他"];
+let records=JSON.parse(localStorage.getItem(KEY)||"[]");
+let currentTab="records", currentFilter="すべて", editingId=null, currentDate=today();
+
+const yen=n=>Number(n||0).toLocaleString("ja-JP")+"円";
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+function save(){localStorage.setItem(KEY,JSON.stringify(records));}
+function today(){
+  const d=new Date();
+  const y=d.getFullYear();
+  const m=String(d.getMonth()+1).padStart(2,"0");
+  const day=String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+}
+function dateJP(d){const x=new Date(d+"T00:00:00");return `${x.getMonth()+1}月${x.getDate()}日 ${"日月火水木金土"[x.getDay()]}曜日`}
+
+function render(){
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===currentTab));
+  if(currentTab==="records") renderRecords();
+  if(currentTab==="accounts") renderAccounts();
+  if(currentTab==="summary") renderSummary();
+  if(currentTab==="search") renderSearch();
+  if(currentTab==="settings") renderSettings();
+}
+function recordCard(r){
+  const sign=r.kind==="収入"?"+":"−";
+  const badges=[
+    r.status==="未確定"?`<span class="badge warn">未確定</span>`:"",
+    r.advance?`<span class="badge warn">立替</span>`:""
+  ].join("");
+  const detail=[
+    r.account,
+    r.payee?`先：${esc(r.payee)}`:"",
+    r.purpose?`用途：${esc(r.purpose)}`:"",
+    r.method?`方法：${esc(r.method)}`:"",
+    r.location?`場所：${esc(r.location)}`:""
+  ].filter(Boolean).join("　");
+  return `<div class="card">
+    <div class="row">
+      <label class="select-record"><input type="checkbox" class="record-check" data-id="${r.id}"><span>選択</span></label>
+      <div class="amount">${sign}${yen(r.amount)}</div>
+    </div>
+    <div class="title" style="margin-top:7px">${esc(r.kind)} ${badges}</div>
+    <div class="sub">${esc(detail)}</div>
+    ${r.note?`<div class="sub">メモ：${esc(r.note)}</div>`:""}
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button type="button" class="filter" onclick="openForm('${r.id}')">✏️ 編集</button>
+    </div>
+  </div>`;
+}
+
+function renderRecords(){
+  const filtered=records.filter(r=>r.date===currentDate && (
+    currentFilter==="すべて" ||
+    (currentFilter==="立替" && r.advance) ||
+    (currentFilter==="未確定" && r.status==="未確定") ||
+    r.account===currentFilter
+  ));
+  filtered.sort((a,b)=>b.id-a.id);
+
+  const d=new Date(currentDate+"T00:00:00");
+  const dateLabel=`${d.getMonth()+1}月${d.getDate()}日（${"日月火水木金土"[d.getDay()]}）`;
+
+  let html=`<div class="month">
+    <button type="button" id="prevDate" aria-label="前の日">‹</button>
+    <strong>${dateLabel}</strong>
+    <button type="button" id="nextDate" aria-label="次の日">›</button>
+  </div>`;
+  html+=`<div style="text-align:center;padding:7px 0 2px">
+    <button type="button" class="filter ${currentDate===today()?"active":""}" id="todayBtn">今日</button>
+  </div>`;
+  html+=`<button class="primary" id="recordBtn" type="button">＋ 記録する</button>`;
+  html+=`<div class="filters">${["すべて","教会","セレナ","立替","未確定"].map(f=>`<button class="filter ${currentFilter===f?"active":""}" onclick="setFilter('${f}')">${f}</button>`).join("")}</div>`;
+
+  if(!filtered.length){
+    html+=`<div class="empty">${currentDate===today()?"今日":"この日"}の記録はありません。<br>「＋ 記録する」から記録できます。</div>`;
+  } else {
+    html+=`<div class="daybar"><span>${dateJP(currentDate)}</span><span>${filtered.length}件</span></div>`;
+    html+=`<div class="select-toolbar"><button type="button" class="delete-selected" id="deleteSelected" disabled>🗑️ 選択した記録を削除（0件）</button></div>`;
+    filtered.forEach(r=>html+=recordCard(r));
+  }
+  document.getElementById("main").innerHTML=html;
+
+  // 選択した記録だけを削除する
+  const checks=[...document.querySelectorAll(".record-check")];
+  const deleteSelected=document.getElementById("deleteSelected");
+  const updateDeleteButton=()=>{
+    const n=document.querySelectorAll(".record-check:checked").length;
+    if(deleteSelected){
+      deleteSelected.textContent=`🗑️ 選択した記録を削除（${n}件）`;
+      deleteSelected.disabled=n===0;
+    }
+  };
+  checks.forEach(ch=>ch.addEventListener("change",updateDeleteButton));
+  if(deleteSelected) deleteSelected.addEventListener("click",()=>{
+    const ids=checks.filter(c=>c.checked).map(c=>String(c.dataset.id));
+    if(!ids.length)return;
+    const box=document.createElement("div");
+    box.className="delete-confirm";
+    box.innerHTML=`<div><b>${ids.length}件を削除しますか？</b><br><span class="small">選択した記録だけが削除されます。この操作は元に戻せません。</span></div>
+      <button type="button" class="delete-yes" id="deleteYes">削除する</button>
+      <button type="button" class="delete-no" id="deleteNo">やめる</button>`;
+    deleteSelected.replaceWith(box);
+    document.getElementById("deleteNo").addEventListener("click",()=>render());
+    document.getElementById("deleteYes").addEventListener("click",()=>{
+      const idSet=new Set(ids);
+      records=records.filter(r=>!idSet.has(String(r.id)));
+      save();
+      render();
+    });
+  });
+
+  document.getElementById("prevDate").addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    moveDate(-1);
+  });
+  document.getElementById("nextDate").addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    moveDate(1);
+  });
+  document.getElementById("todayBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    goToday();
+  });
+  document.getElementById("recordBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    openForm();
+  });
+}
+function setFilter(f){currentFilter=f;render()}
+
+function moveDate(offset){
+  const parts=currentDate.split("-").map(Number);
+  const d=new Date(parts[0], parts[1]-1, parts[2]);
+  d.setDate(d.getDate()+offset);
+  const y=d.getFullYear();
+  const m=String(d.getMonth()+1).padStart(2,"0");
+  const day=String(d.getDate()).padStart(2,"0");
+  currentDate=`${y}-${m}-${day}`;
+  render();
+}
+
+function goToday(){
+  currentDate=today();
+  render();
+}
+
+function openForm(id){
+  editingId=id||null; const r=id?records.find(x=>x.id==id):null;
+  const kind=r?.kind||"支出";
+  document.getElementById("main").innerHTML=`
+  <div class="panel">
+    <h2>${r?"記録を編集":"記録する"}</h2>
+    <label>日付</label><input id="f_date" type="date" value="${r?.date||today()}">
+    <label>種類</label><div class="type">${["支出","収入","お金を移す"].map(k=>`<button class="${kind===k?"active":""}" onclick="setKind('${k}')">${k}</button>`).join("")}</div>
+    <input id="f_kind" type="hidden" value="${kind}">
+    <label>金額</label><input id="f_amount" type="number" inputmode="numeric" placeholder="例：5000" value="${r?.amount||""}">
+    <label>会計</label><select id="f_account">${ACCOUNTS.map(a=>`<option ${a===(r?.account||"教会")?"selected":""}>${a}</option>`).join("")}</select>
+    <label id="personLabel">${kind==="収入"?"受け取った人":"支払った人"}</label>
+    <input id="f_payer" value="${esc(r?.payer||"大和")}" placeholder="${kind==="収入"?"誰が受け取ったか":"誰が支払ったか"}">
+    <label>支払先・受取先</label><input id="f_payee" value="${esc(r?.payee||"")}" placeholder="例：エネオス、○○家">
+    <label>用途・目的</label><input id="f_purpose" value="${esc(r?.purpose||"")}" placeholder="例：ガソリン、お供え、御霊前">
+    <label>支払方法</label><select id="f_method">${METHODS.map(a=>`<option ${a===(r?.method||"現金")?"selected":""}>${a}</option>`).join("")}</select>
+    <label>お金の場所（残高・引落元）</label>
+    <select id="f_location">${LOCATIONS.map(a=>`<option ${a===(r?.location||"現金")?"selected":""}>${a}</option>`).join("")}</select>
+    <div class="note">「支払方法」はどう払ったか、「お金の場所」は実際にどの現金・口座・残高から出たかを記録します。</div>
+    <label>状態</label><select id="f_status" onchange="toggleReason()"><option ${r?.status!=="未確定"?"selected":""}>確定</option><option ${r?.status==="未確定"?"selected":""}>未確定</option></select>
+    <div id="reasonBox" class="${r?.status==="未確定"?"":"hidden"}"><label>未確定の理由</label>
+      <select id="f_reason"><option>ETC・後日請求</option><option>クレジットカード</option><option>金額未確定</option><option>立替・未返済</option><option>その他</option></select>
+    </div>
+    <label>立替</label><select id="f_advance"><option value="0" ${!r?.advance?"selected":""}>なし</option><option value="1" ${r?.advance?"selected":""}>あり</option></select>
+    <label>メモ</label><textarea id="f_note" placeholder="必要なら記録しておきたいことを">${esc(r?.note||"")}</textarea>
+    <div class="form-actions"><button class="cancel" id="cancelFormBtn" type="button">キャンセル</button><button class="save" id="saveFormBtn" type="button">保存</button></div>
+    ${r?`<button class="cancel danger" style="width:100%;margin-top:10px" onclick="deleteRecord('${r.id}')">この記録を削除</button>`:""}
+  </div>`;
+
+  // Safariでも確実に反応するよう、保存・キャンセルをイベントで登録
+  document.getElementById("saveFormBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    saveForm();
+  });
+  document.getElementById("cancelFormBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    currentTab="records";
+    render();
+  });
+}
+function setKind(k){
+  document.getElementById("f_kind").value=k;
+  document.querySelectorAll(".type button").forEach(b=>b.classList.toggle("active",b.textContent===k));
+  document.getElementById("personLabel").textContent=k==="収入"?"受け取った人":"支払った人";
+}
+function toggleReason(){document.getElementById("reasonBox").classList.toggle("hidden",document.getElementById("f_status").value!=="未確定")}
+function saveForm(){
+  const amount=Number(document.getElementById("f_amount").value);
+  if(!amount){alert("金額を入力してください。");return}
+  const obj={
+    id:editingId||Date.now(), date:document.getElementById("f_date").value,
+    kind:document.getElementById("f_kind").value, amount,
+    account:document.getElementById("f_account").value,payer:document.getElementById("f_payer").value.trim(),
+    payee:document.getElementById("f_payee").value.trim(),purpose:document.getElementById("f_purpose").value.trim(),
+    method:document.getElementById("f_method").value,location:document.getElementById("f_location").value,
+    status:document.getElementById("f_status").value,
+    reason:document.getElementById("f_status").value==="未確定"?document.getElementById("f_reason").value:"",
+    advance:document.getElementById("f_advance").value==="1",note:document.getElementById("f_note").value.trim()
+  };
+  if(editingId) records=records.map(x=>x.id==editingId?obj:x); else records.push(obj);
+  save();
+  editingId=null;
+  currentTab="records";
+  currentFilter="すべて";
+  currentDate=obj.date;
+  render();
+}
+function deleteRecord(id){if(confirm("この記録を削除しますか？")){records=records.filter(x=>x.id!=id);save();render()}}
+function renderAccounts(){
+  const totals={}; ACCOUNTS.forEach(a=>totals[a]={in:0,out:0});
+  records.forEach(r=>{if(!totals[r.account])totals[r.account]={in:0,out:0}; if(r.kind==="収入")totals[r.account].in+=r.amount; else if(r.kind==="支出")totals[r.account].out+=r.amount});
+  let html=`<div class="section"><h2>会計</h2><div class="note">会計は「誰のお金・何の目的のお金か」を分けて管理します。</div>`;
+  ACCOUNTS.forEach(a=>html+=`<div class="stat"><b>${a}</b><br><span class="small">収入 ${yen(totals[a].in)}　支出 ${yen(totals[a].out)}</span><br><strong>差引 ${yen(totals[a].in-totals[a].out)}</strong></div>`);
+  html+=`</div>`; document.getElementById("main").innerHTML=html;
+}
+function renderSummary(){
+  const unsettled=records.filter(r=>r.status==="未確定");
+  const advance=records.filter(r=>r.advance);
+  const total=r=>r.reduce((s,x)=>s+x.amount,0);
+  document.getElementById("main").innerHTML=`<div class="section"><h2>集計</h2>
+    <div class="stat">未確定<br><b>${yen(total(unsettled))}</b><br><span class="small">${unsettled.length}件</span></div>
+    <div class="stat">立替<br><b>${yen(total(advance))}</b><br><span class="small">${advance.length}件</span></div>
+    <div class="stat">記録件数<br><b>${records.length}件</b></div>
+  </div>`;
+}
+function renderSearch(){
+  document.getElementById("main").innerHTML=`<div class="panel"><h2>検索</h2>
+  <input id="q" placeholder="支払先・用途・会計・人など" oninput="doSearch()" autofocus>
+  <div id="results" style="margin-top:12px"></div></div>`;
+}
+function doSearch(){
+  const q=document.getElementById("q").value.trim().toLowerCase();
+  const rs=records.filter(r=>[r.account,r.payer,r.payee,r.purpose,r.method,r.location,r.reason,r.note].join(" ").toLowerCase().includes(q));
+  document.getElementById("results").innerHTML=rs.length?rs.map(r=>recordCard(r)).join(""):`<div class="empty">${q?"該当する記録はありません。":"検索語を入力してください。"}</div>`;
+}
+function renderSettings(){
+  document.getElementById("main").innerHTML=`<div class="section"><h2>設定</h2>
+    <div class="stat"><b>データ</b><br><span class="small">現在 ${records.length}件の記録があります。データはこの端末のブラウザに保存されます。</span></div>
+    <button class="primary" onclick="exportData()">バックアップ保存</button>
+    <button class="primary" onclick="importData()">バックアップ復元</button>
+    <button class="primary danger" onclick="clearAll()">全データを削除</button>
+    <p class="note">今は試作版です。大切な記録は、定期的に「バックアップ保存」してください。GitHub上には入力データは保存されません。</p>
+  </div>`;
+}
+function exportData(){
+  const blob=new Blob([JSON.stringify(records,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="会計まとめ_バックアップ.json";a.click();
+}
+function importData(){
+  const input=document.createElement("input");input.type="file";input.accept=".json,application/json";
+  input.onchange=()=>{const f=input.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{records=JSON.parse(rd.result);save();render();alert("復元しました。");}catch(e){alert("バックアップファイルを読み込めませんでした。")}};rd.readAsText(f)};
+  input.click();
+}
+function clearAll(){if(!records.length){alert("削除する記録はありません。");return;} if(confirm(`この端末に保存されている ${records.length}件の記録をすべて削除します。
+
+この操作は元に戻せません。
+バックアップが必要なら先に保存してください。`)){records=[];save();currentDate=today();currentTab="records";render();}}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{currentTab=b.dataset.tab;render()});
+render();
+</script>
+</body>
+</html>
